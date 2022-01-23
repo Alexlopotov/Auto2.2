@@ -32,10 +32,6 @@ public class DeliveryCardTest {
         $(byText(date));
     }
 
-//    Способ поиска даты во всплывающем сообщении выбран не очень удачно. В текущей реализации Вы его ищите среди всех
-//    элементов страницы, что совсем ненадёжно, дата ведь используется и в поле формы. Лучше делать так
-//    $("[data-test-id=notification] .notification__content").shouldHave(text("Встреча успешно забронирована на "+date));
-
     @Test
     void shouldCorrectForm1() {
         open("http://localhost:9999");
