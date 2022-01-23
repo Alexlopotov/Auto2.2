@@ -28,8 +28,7 @@ public class DeliveryCardTest {
         $("[data-test-id='agreement']").click();
         $$("button").find(exactText("Забронировать")).click();
         $(byText("Успешно!")).waitUntil(visible, 11000);
-        $(byText("Встреча успешно забронирована на"));
-        $(byText(date));
+        $("[data-test-id=notification] .notification__content").shouldHave(text("Встреча успешно забронирована на "+date));
     }
 
     @Test
