@@ -77,7 +77,6 @@ public class DeliveryCardPopupTest {
 
         DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         String dateDelivery = formatter1.format(dateOfDelivery);
-        $("[data-test-id=success-notification] .notification__content").shouldHave(text("Встреча успешно " +
-                "запланирована на "+dateOfDelivery));
+        $("[data-test-id=success-notification] .notification__content").shouldHave(text("Встреча успешно запланирована на "+dateOfDelivery1));
     }
 }
